@@ -1,4 +1,4 @@
-% Szymon Cogiel metoda eleiminacji gaussa
+% Szymon Cogiel metoda eleiminacji gaussa oraz wyznacznik macierzy
 close all; clc; %clear all; 
 
 n = 7;
