@@ -38,10 +38,10 @@ for i = 1:s
         end
     end
 end
-det = 0;
+det = 1;
 % liczenie wyznacznika
 for i = 1:s
-   det = det +A(i, i);
+   det = det *A(i, i);
 end
 
 % współczynnik po zamianie wierszy
