@@ -1,9 +1,9 @@
 # AGH
 Projects created by me for the AGH University of Science and Technology
 
-## 1. [Numerical Methods](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Numerical%20Methods)
+## [1. Numerical Methods](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Numerical%20Methods)
 - LU decomposition and determinant alghorithm
-## 2. [Physics Labolatory](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Physics%20II/gravity%20acceleration%20analysis)
+## [2. Physics Labolatory](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Physics%20II/gravity%20acceleration%20analysis)
 - gravity acceleration analysis
 
 
