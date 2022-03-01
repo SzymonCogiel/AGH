@@ -10,8 +10,8 @@ Projects created by me for the AGH University of Science and Technology
   ## [2. Physics Labolatory](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Physics%20II/gravity%20acceleration%20analysis)
   - gravity acceleration analysis
   ## [3. Object Oriented Programming](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Object%20Oriented%20Programming/CogielSzymon-etap2)
-  - The "factory" project using the object-oriented programming paradigm in C++
-  - The project uses the **SDL-2** library to create a radio in the car
+  The "factory" project using the object-oriented programming paradigm in C++
+  The project uses the **SDL-2** library to create a radio in the car
   ## [4. Spatial data analysis](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Spatial%20data%20analysis)
   Spatial data analysis projects in R with the use of libraries:
   - **spatstat**
