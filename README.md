@@ -12,13 +12,19 @@ Projects created by me for the AGH University of Science and Technology
   - The project uses the **SDL-2** library to create a radio in the car
   ## [4. Spatial data analysis](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Spatial%20data%20analysis)
   Spatial data analysis projects in R with the use of libraries:
+  
     - **spatstat**
+    
     - **raster**
+    
     - **dbscan**
+    
     - **sf**
+    
     - **ggplot2**
+    
     - **dplyr**
-  ## [5. Geohazards]
-  **Projekt ,,Pietrzejowice"**
+  ## [5. Geohazards](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Geohazards)
+  **Projekt ,,Pietrzejowice"** (project in pairs)
   Analiza zagrozenia osowiskowego w Pietrzejowicach. Podczas projektu zostaly zebrane dane w terenie a nastepnie zostaly przetworzone w programie ArcGIS Pro.
 
