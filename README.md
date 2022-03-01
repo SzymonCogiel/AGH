@@ -5,6 +5,8 @@ Projects created by me for the AGH University of Science and Technology
   ## [1. Numerical Methods](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Numerical%20Methods)
   - Gaussian elimination and determinant alghorithm in Matlab
   - Simple iteration method to solve system of linear equations in Matlab
+  - Polynomial approximation in Matlab
+  - Numerical integration in Matlab
   ## [2. Physics Labolatory](https://github.com/SzymonCogiel/AGH/tree/main/Semestr%20III/Physics%20II/gravity%20acceleration%20analysis)
   - gravity acceleration analysis
   ## [3. Object Oriented Programming](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Object%20Oriented%20Programming/CogielSzymon-etap2)
