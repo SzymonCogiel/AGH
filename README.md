@@ -13,6 +13,9 @@ Projects created by me for the AGH University of Science and Technology
   The "factory" project using the object-oriented programming paradigm in C++.
   
   The project uses the **SDL-2** library to sound processing.
+  
+  
+  Files automatically arrange directories with CMake.
   ## [4. Spatial data analysis](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Spatial%20data%20analysis)
   Spatial data analysis projects in R with the use of libraries:
   - **spatstat**
