@@ -23,7 +23,7 @@ Projects created by me for the AGH University of Science and Technology
   - **dplyr**
   ## [5. Geohazards](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Geohazards)
   **Projekt ,,Pietrzejowice"** (project in pairs)
-  Analiza zagrozenia osowiskowego w Pietrzejowicach. Podczas projektu zostaly zebrane dane w terenie a nastepnie zostaly przetworzone w programie ArcGIS Pro.
+    Analysis of landslide threats in Pietrzejowice. During the project, field data was collected and then processed in ArcGIS Pro.
 # [SEMESTR IV](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20IV)
   ## [1. Electronic Measurement Techniques in Earth Sciences](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20IV/Electronic%20Measurement%20Techniques%20in%20Earth%20Sciences)
 - Acquisition of measurement data from a SANWA multimeter, through a self-written program that communicates with the multimeter via a serial port in C.
