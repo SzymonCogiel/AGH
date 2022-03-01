@@ -1,0 +1,76 @@
+Menu ,,Produkcja i spis pojazdow"
+Wyprodukuj samochod lub motor
+Wyprodukuj samochod
+nazwa
+marka
+rocznik
+przebieg
+splanie
+pojemnosc baku
+cena
+kolor
+pojemnosc
+Menu ,,Produkcja i spis pojazdow"
+Wyświetl liste wyprodukowanych samochodow
+Menu ,,Produkcja i spis pojazdow"
+Wyświetl liste wyprodukowanych motorow
+Menu ,,Produkcja i spis pojazdow"
+Wyprodukuj rower
+kolor
+Menu ,,Produkcja i spis pojazdow"
+Wyswietl liste wyprodukowanych rowerow
+Menu ,,Produkcja i spis pojazdow"
+Wyswietl informacje na temat fabryki
+Menu ,,operacji na plikach"
+Wyswietl pozazdy z plikow
+Menu ,,operacji na plikach"
+Zapisz samochody do plku
+Menu ,,eksploracji samochodu"
+Uzyj samochodu 
+index samochodu do eksploracji
+napelnij bak do pelna
+przyspiesz
+bieg
+jedz
+1 km
+hamuj
+wyswietl info na temat samochodu
+radio krzysztof krwaczyk
+powrot do menu
+powrot do menu
+menu "komis"
+Przewidz cene i potencjalnie kup samochod
+index
+menu "komis"
+lista samochodow w komise
+menu "komis"
+sprzedaj samochod
+index
+lakiernik
+wybor pojazdu
+index
+kolor
+menu rower
+dodaj koszyk
+ladownosc
+index
+inex fabryki
+stworz dabryke
+nazwa
+lokalizacja
+zmien fabryke
+index fabryki
+menu info
+info fabryki
+zamien fabtyke
+index poza zakresem
+lakiernik blad poza zakresem #wyjątek
+zamien fabtyke
+index w zakresie
+menu eksploracji samochodu
+kopia samochodu
+index
+
+
+
+

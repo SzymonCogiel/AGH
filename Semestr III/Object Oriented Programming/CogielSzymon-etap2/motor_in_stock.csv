@@ -1,0 +1,4 @@
+ID,Name,Brand,Year,Mileage,Fuel_usage,Max_fuel_level,Price, Color, Capacity
+0, Yamaha, Yamaha, 2001, 100, 5, 30, 10000, black, 210
+1, Yamaha, Yamaha, 2001, 1000, 5, 30, 5000,koko,210
+2, Yamaha, Yamaha, 2002, 1000, 5, 30, 5500,koko,210

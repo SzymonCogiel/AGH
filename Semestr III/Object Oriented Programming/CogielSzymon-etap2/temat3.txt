@@ -1,0 +1,72 @@
+Szymon Cogiel Projekt Fabryka Samochodow Etap 2/3
+
+POTRZEBNE BIBLIOTEKI:
+- SDL_mixer 2.0 
+- SDL2 (2.0.10)
+- libsdl2-mixer-dev
+- tuple
+
+Komendy wpisane do terminla aby zainstalowac SDL2 i SDL mixer
+(
+837 sudo apt-get install build-essential libsdl2-dev
+838 sudo apt-get install libsdl2-image-dev libsdl2-gfx-dev  libsdl2-ttf-dev libsdl2-mixer-dev
+839 sudo apt-get install libsdl2-mixer-dev
+)
+
+Celem projektu jest modeloanie fabryki pojazdów silnikowych oraz pojazdow za pomocą paradygmatu obiektowego oraz narzedzia C++.
+
+[A] Opis mozliwosci jakie daje program
+(1) Produkcja i spis pojazdow
+- daje mozliwosc wyprodukowania pojazdow oraz wypisania listy pojazdow itp.
+(2) Operacje na plikach
+- daje mozliwosc wczytania/odczytnaia/zapisania pojazdow itp.
+(3) Eksploracja samochoduodu
+- moliwosc uzycia funkcjonalnosci samochodu, kopi samochodu, wyslania samochodu do sprzedazy itp
+(4) Eksploracja motoru
+- moliwosc uzycia funkcjonalnosci motoru, kopi motoru, wyslania motoru do sprzedazy
+(5) Komis
+- mozliwosc predykcji ceny, zakupu i sprzedarzy
+(6) Lakiernik
+- mozliwosc zmienienia koloru pojazdu
+(7) Jazda na rowerze
+- mozliwosci jazdy oraz dodania koszyka do roweru
+(8) Zmien uzywana fabryke
+- zmienia aktulnie eksplorowaną fabryke
+(9) Stworz nowa fabryke
+- tworzy nową instancje fabryki
+
+
+Klasa Car:
+	- mozliwosc jazdy samochodem
+	- mozliwosc zmiany biegow
+	- mozliwosc tankowania
+	- mozliwosc przyspoeszenia
+	- mozliwosc puszczenia radia
+	- mozliwosc hamowania
+	- mozliwosc puszczenia radia
+Klasa Motor niemal identyczna do klasy Car
+Klasa Factory:
+	- słuzy do obslugi wszystkich klas
+	- dziala jak konterer z vektorami
+	- produkcja pojazdow
+Klasa Komis posiada: 
+	- prosty model linowy do predykcji ceny
+	- mozliwosc kupna pojazdu silikowego
+	- moliwosc sprzedazy pojazdu silnikowego
+Klasa Lakiernik:
+	- mozliwosc zmiany koloru pojazdu silnikowego
+Klasa Rower:
+	- moliwosc jazdy i dodania koszyka
+
+
+Użyte szablony:
+1) Szablon klasy wyjąteku błednego typu wpisanego przez użytkownika (klasa Cin_exception)
+(dla roznych typow danych)
+2)Szablon funkcji produkcji pojazdu silnikowego (T createCar() klasa Factory)
+3)Szablon funkcji tworzenia instancji pojazdu (T createCar1 klasa Factory)
+
+
+Użyte wyjątki:
+1) wyjątek podania indeksu poza zakresem wektora (bez bloku throw)
+2) wyjątek dzielenia przez 0 (klasa Div_zero_exc & Car)
+3) wyjątek błednego typu wpisanego przez użytkownika (klasa Cin_exception)

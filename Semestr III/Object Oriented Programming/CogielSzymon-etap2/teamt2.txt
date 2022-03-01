@@ -1,0 +1,112 @@
+Szymon Cogiel Projekt Fabryka Samochodow Etap 2/3
+
+POTRZEBNE BIBLIOTEKI:
+- SDL_mixer 2.0 
+- SDL2 (2.0.10)
+- libsdl2-mixer-dev
+- tuple
+
+Komendy wpisane do terminla aby zainstalowac SDL2 i SDL mixer
+(
+837 sudo apt-get install build-essential libsdl2-dev
+838 sudo apt-get install libsdl2-image-dev libsdl2-gfx-dev  libsdl2-ttf-dev libsdl2-mixer-dev
+839 sudo apt-get install libsdl2-mixer-dev
+)
+
+Celem projektu jest modeloanie fabryki samochow oraz samochody za pomocą paradygmatu obiektowego oraz narzedzia C++.
+
+^^szybkie właczenie kazdej funkcjonalnosci^^
+^^uzyj opcji (10) wpisz gotowy plik lub wlasny(zgodny konwencją plikow programu Car.cpp*[2]) rekomenduje sie gotowy pod nazwą "cars_in_stock.csv"^^
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[A] Opis mozliwosci jakie daje program
+
+Program rozpoczyna sie od stworzenia instancji firmy oraz przedsawienia moliwosci firmy takich jak:
+(0) Zakoncz program
+(1) Wyprodukuj samochod
+(2) Pokaz liste wyprodukowanych samochodow
+(3) Wyslij samochod na liste samochodow do sprzedazy
+(4) Wyswietl liste samochodow na sprzedaz
+(5) Usun samochod z listy wyprodukowanych samochodow
+(6) Zapisz liste wyprodukowanych samochodow do pliku csv
+(7) Zapisz liste samochodow na sprzedaz do pliku csv
+*[1](8) Eksploruj/Testuj samochod(z listy wprodukowanych samochodow)
+(9) Wyswietl samochody z pliku
+(10) Wczytaj samochody z pliku do programu
+(11) Wyswietl informacje na temat fabryk
+(12) Wyprodukuj samochod na wzor innego istniejacego samochodu
+
+*[1]Daje mozliwość korzystania z moziwosci jakie oferuje classa Car takich jak:
+{1}Jedz
+{2}Napelnij bak
+{3}Napelnij bak do pelna
+{4}Przyspiesz
+{5}Hamuj
+{6}Wyswietl informacje na temat samochodu
+{7}RADIOOOOOO!!!!!!!!!!!!!
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[B] Sposoby rozwiazania problemow:
+
+Firma:
+(1) Do wykonania tej czynnosci uzywany dwoch funkcji człąkowskich klasy Factory oraz vektora car_list
+- metoda produce() oraganizuje ui(w postaci konsoli) oraz używa metody createCar() do dodania do vektora samochodu
+- metoda createCar() prosi o wpisanie danych samochodu i zwraca instancjie klasy Car o podanych parametrach
+
+(2) Użylismy petli zakresowej for do wypisania na ekran elementow vektora car_list
+
+(3) Użylismy 2 vektorow za pomocą metody .insert() i metody .erase() przesylamy element vektora pierwszego do vektora drugiego a nastepnie metoda erase usowa przesłany element z wektora z ktorego pochodził
+
+(4) Użylismy petli zakresowej for do wypisania na ekran elementow vektora car_dor_sell_list
+
+(5) Za pomoca metody erase usuwamy element z vektora
+
+(6) Korzystajac z biblioteki fstream zapisujemy vektor samochodow do pliku csv
+
+(7) Korzystajac z biblioteki fstream zapisujemy vektor samochodow do pliku csv
+
+(9) Za pomoca biblioteki fstream oraz dwoch wektorow (jeden 1D drugi 2D), petli, funkcji getline() oraz stringstram() oraz petli while usuwamy z vektora przecinki nastepnie wyswietalmy zawartosc pliku csv
+
+(10) Za pomoca biblioteki fstream oraz dwoch wektorow (jeden 1D drugi 2D), petli, funkcji getline() oraz stringstram() oraz petli while usuwamy z vektora przecinki wczytujemy do programu dane z pliku csv nastepnie za pomocą dwoch petli for pobieramy dane zawarte w wektorze i odpowiednio zamieniamy na poprawne dane za pomoca funkcji remove usuwamy znaki biale i usuwamy z stringa nastepnie za uzywamy funkcji do konversji stringa do innych danych, na koniec tworzymy z uzyskanych danych nowa instancje klasy Car(funkcja carateCar()) i dodajemy ja do wektora
+
+(11) przeladowany oprerator << wysietla dane na temat fabryki
+
+(12) za pomocą konstruktora kopiujacego tworzymy nowy okiekt klasy Car i dodajemy go do wektora
+
+(8) Wyswietla menu z opcjami
+{1} uzywa metody drive ktora zwieksza licznik km oraz zmniejsza poziom paiwa w baku wyswietla przejechane km oraz czas w jaki zostal przejechany okreslony dystans, metoda moze byc jedynie uzyta kiedy predkosciomierz wskazuje liczbe wiekszą od 0
+
+{2} zwieksza poziom paliwa w baku oraz pokazuje ile nalezy zaplacic
+
+{3} zwieksz poziom paliwa do maksymalnego poziomu baku i pokazuje ile nazlezy zplacic
+
+{4} uzywa metody acceleration_max() która zwieksz predkosc do maksymalnej predkosci z ktorą mozna jechac na danym biegu za pomocą funkcji typu enum change_gear() ktora zwraca nowy bieg (jak predkosc jest za mala lub da duza dla danego biegu samochod warczy i wrzuca bieg spowrotem na poprzedni wczytany)
+
+{5} zmiejsza predkosc do 0
+
+{6} wyswietal opis samochodu za pomocą przeładowanego operatora <<
+
+{7} Radio:
+Odtwarza muzyke pt. "CHCIALBYMBYC Krzysztofa Krawczyka" lub "W_PORCIE Kizo Żabson Zetha"
+- metoda radio jest metodą napisaną za pomocą biblioteki SDL2
+- używa specjalnych typów wbudowanych w biblioteke SDL2
+- uzywa funkcji ktore przetwarzają plik dzwiekowy
+- uzywa funkcji ktore właczja glosnik w urzadzeniu
+- korzysta ze struktury ktora przyjmuje atrybuty rowne wartoscia zwracanym przez funkcjie SDL_LOADWAV
+- odpala dane dzwiekowe w petli while az ilosc danych dojdzie do 0 (są dekrementowane w strukturze)
+- zamyka urzadzenie dzwiekowe
+- zwalnia zaalokowna pamiec
+- wyłacza zaincjalizowany podsystem przez SDL
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*[2] Przykładowy układ pliku csv do wczytania znajduje sie pod podwujną przerywaną linią (pierwszy to nagłowki z oznaczeniami danych w pliku)
+==========================================================
+ID,Name,Brand,Year,Mileage,Fuel_usage,Max_fuel_level,Price
+1, Porche, Porche, 2, 3, 1, 1, 1
+==========================================================
+
+
+
+

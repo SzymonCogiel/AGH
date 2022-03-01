@@ -1,0 +1,17 @@
+uruchomienie z argumentami z wiersza polecen:
+./CogielSzymon-etap2 datafactory.txt cars_in_stock.csv motor_in_stock.csv
+
+pierwszy argument "./"+"Nazwa_pliku_który_chcesz_urchomic"			./CogielSzymon-etap2
+drugi argument "nazwa_pliku_z_danymi_fabryki wraz z rozszerzeniem"		datafactory.txt
+trzeci argument "nazwa_pliku_z_samochodami wraz z rozszerzeniem"		cars_in_stock.csv
+czwarty argument "nazwa_pliku_z_danymi_motorow wraz z rozszerzeniem"		motor_in_stock.csv
+
+Po uruchomienu powyższej komendy:
+(1.1) wpisz "8" zeby zmienic index vektora na indeks spoza zakresu i sproboj włączyć losową opcjie
+program wyrzuci wyjątek "Out of Range error: vector::_M_range_check: __n (which is 'twoj wybor') >= this->size() (which is 'twoj wybor')"
+
+- zeby program wrócił do funkcjionalnosci ustaw ponownie index cektora fabryk natomiast na indeks ktory nalezy do jakiejs z fabryk
+
+(1.2) w menu głównym ("MENU") wpisz 1 nastepnie 1 i otrzymasz funkcjie do tworzenia samochodow przy podawaniu danych podaj ujemną liczbe program wyzuci błąd wpisania ujemniej liczby lub wpisz w miejscu danych liczbowych daną o innym typie program wyrzuci "error"
+
+(2.1) w podpunkcie (1.2) używalismy poraz pierszy szablonu klasy wyjątkow oraz szablonów funkcji do tworzenia pojazdow silikowych
