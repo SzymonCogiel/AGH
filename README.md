@@ -12,7 +12,7 @@ Projects created by me for the AGH University of Science and Technology
   ## [3. Object Oriented Programming](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Object%20Oriented%20Programming/CogielSzymon-etap2)
   The "factory" project using the object-oriented programming paradigm in C++.
   
-  The project uses the **SDL-2** library to create a radio in the car.
+  The project uses the **SDL-2** library to sound processing.
   ## [4. Spatial data analysis](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20III/Spatial%20data%20analysis)
   Spatial data analysis projects in R with the use of libraries:
   - **spatstat**
