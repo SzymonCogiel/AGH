@@ -32,6 +32,6 @@ Projects created by me for the AGH University of Science and Technology
   ## [1. Electronic Measurement Techniques in Earth Sciences](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20IV/Electronic%20Measurement%20Techniques%20in%20Earth%20Sciences)
 - Acquisition of measurement data from a SANWA multimeter, through a self-written program that communicates with the multimeter via a serial port in C.
 
-  ## [2. Earth Science Modeling](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20IV/Earth%20Science%20Modeling)
+ ## [2. Earth Science Modeling](https://github.com/SzymonCogiel/AGH/tree/main/Semester%20IV/Earth%20Science%20Modeling)
   - Solving Laplace's equation by MRS method
   - Geotermal model the propagation of temperature by a variable disturbing medium
