@@ -158,6 +158,11 @@
 
 ## [3. Azure]()
   
+  Sprawdzanie czy user jest zalogowany
+  ```
+  Get-AzContext | Should -BeNullOrEmpty
+  ```
+  
   Logowanie do Azure wraz z przypisywaniem danych logowania do zmiennej
   ```
   $account = Connect-AzAccount    
@@ -171,7 +176,11 @@
   Typ zmiemmej przetrzymujacej logowanie
   ```
   $account.type | Should -Be $PSAzureProfile
+  # lub
+  $account | Should -BeOfType [Microsoft.Azure.Commands.Profile.Models.Core.PSAzureProfile]
   ```
+
+
 
   Sprawdzanie maila 
   ```
@@ -238,4 +247,63 @@
   $server.Location | Should -Be $client.Location
   ```
 
+  Przypisywanie do zmiennej informacji o resoutce groups
+  ```
+  $resourceGroups = Get-AzResourceGroup
+  ```
+
+  Sprawdzanie ilosci resource group
+  ```
+  $resourceGroups.count | Should -BeGreaterThan 1
+  ```
+
+  Przypisywanie resource group gdzie jest wirtualna maszyna z której korzystamy 'PowerShell_group'
+  ```
+  $resourceGroup = $resourceGroups | Where-Object {$_.ResourceGroupName -match 'PowerShell_group'}
+  ```
+
+  Sprawdzanie lokalizacji resource group
+  ```
+  $resourceGroup.Location | Should -Be 'northeurope'
+  ```
+
+  Create new resource group in the same geogaphic location as prvious tworzenie nowej grupy
+  ```
+  $newResourceGroup = New-AzResourceGroup -Name "NAZWA_NOWEJ_GRUPY" -Location $resourceGroup.Location
+  ```
+
+  Sprawdzanie czy jest teraz o jedna grupe wiecej niz było wczesinej
+  ```
+  (Get-AzResourceGroup).Count | Should -Be ($resourceGroups.Count+1)
+  ```
+  
+  Sprawdzanie lokalizacji nowej grupy
+  ```
+  $newResourceGroup.Location | Should -Be 'northeurope'
+  ```
+
+  Sprawdzanie nazwy nowej grupy maszynek
+  ```
+  $newResourceGroup.ResourceGroupName | Should -Be 'NAZWA_NOWEJ_GRUPY'
+  ```
+
+  Usowanie nowej grupy
+  ```
+  Remove-AzResourceGroup -Name $newResourceGroup.ResourceGroupName -Force
+  ```
+
+  
+  ```
+  $resourceGroups.Count | Should -BeExactly 2
+  ```
+
+  Disconnect from Azure account wylaczanie maszyny
+  ```
+  Disconnect-AzAccount
+  ```
+
+  sprawdzanie czy user jest zalogowany
+  ```
+  Get-AzContext | Should -BeNullOrEmpty
+  ```
 
