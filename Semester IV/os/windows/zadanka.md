@@ -188,43 +188,54 @@
   $account.Context.Subscription.State | Should -Be 'Enabled'
   ```
 
+  Zwraca wszystkie wirtualne maszyny wraz z ich statusem
+  ```
+  $Script:machines = Get-AzVM
   ```
 
+  Check that there are at least two machines
+  ```
+  $machines.Count | Should -BeGreaterOrEqual 2
   ```
 
+  wysukiwanie maszyny o nazwie 'PowerShell'
+  ```
+  $client = $machines | Where-Object {$_.Name -match 'PowerShell'}
   ```
 
+  sprawdzanie czy maszyna jest wlaczona
+  ```
+  $client.ProvisioningState | Should -Be 'Succeeded'
+  ```
+  
+  Sprawdzanie rodzaju dysku
+  ```
+  $client.HardwareProfile.VmSize | Should -Be 'Standard_D2as_v4'
   ```
 
+  sprawedzanie nazwy admina
+  ```
+  $client.OSProfile.AdminUsername | Should -Be 'SzymonCogiel'
   ```
 
+  Sprawdzanie systemu operacyjnego maszyny
+  ```
+  $client.StorageProfile.OsDisk.OsType | Should -Be 'Windows'
   ```
 
+  Sprawdzanie obrazu systemu
+  ```
+  $client.StorageProfile.ImageReference.Offer | Should -Be 'windows-11'
   ```
 
+  Sprawdzanie client machine Stock Keeping Unit (SKU)
   ```
-  ```
-
-  ```
-
+  $client.StorageProfile.ImageReference.Sku | Should -Be 'win11-21h2-pro'
   ```
 
+  Sprawdzanie czy lokalizacja serwera który zostal wczytany tak jak client jest taka sama
   ```
-
-  ```
-
-  ```
-
-  ```
-
-  ```
-
-  ```
-
-  ```
-
-  ```
-
+  $server.Location | Should -Be $client.Location
   ```
 
 
