@@ -108,8 +108,57 @@
 
 
 
+  Wysukiwanie I sprawdzanie konkretnych procesow
+  ```
+  $ChildProcesses = $Processes | Where-Object { $_.Parent.Name -ne 'explorer' }
+  ```
+  
+  ```
+
+  ```
 
   ```
 
   ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
 
