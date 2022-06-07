@@ -107,22 +107,24 @@
 
 
 
-
-  Wysukiwanie I sprawdzanie konkretnych procesow
+  Wysukiwanie i sprawdzanie konkretnych procesow o podanej nazwie takie sam string name
   ```
   $ChildProcesses = $Processes | Where-Object { $_.Parent.Name -ne 'explorer' }
   ```
   
+  Tworzy plik tymczsowy
+  ```
+  $File = New-TemporaryFile    
   ```
 
+  Odpala process notepad w pliku tymczasowym $File(New-temoraryFile) – Wait czeka na koniec procesu
   ```
-
+  Start-Process notepad -ArgumentList $File -Wait 
   ```
-
+  
+  Koansowe sprawdzenie czy kontent pliku jest rowny "Hello!"
   ```
-
-  ```
-
+  Get-Content $File | Should -Be "Hello!" 
   ```
 
   ```
