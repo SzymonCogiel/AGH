@@ -302,7 +302,7 @@
   Disconnect-AzAccount
   ```
 
-  sprawdzanie czy user jest zalogowany
+  Sprawdzanie czy user jest zalogowany
   ```
   Get-AzContext | Should -BeNullOrEmpty
   ```
