@@ -307,3 +307,61 @@
   Get-AzContext | Should -BeNullOrEmpty
   ```
 
+  ## [4. Remoting]()
+  
+  Przypisywanie nazwy uzytkownika do zmiennej
+  ```
+  $remoteUser = "szymoncogiel"
+  ```
+
+  Dawanie poswiadczenia dla $remoteUsser
+  ```
+  $credential = Get-Credential -UserName $remoteUser
+  ```
+
+  Przypisywanie zdalnego hosta
+  ```
+  $Script:remoteHost = "windowsserverco.internal.cloudapp.net"
+  ```
+
+  Tworzenie nowej sesji dla usera przez posiadczenie $credential
+  ```
+  $Script:session = New-PSSession -ComputerName $remoteHost -Credential $credential
+  ```
+
+  Sprawdzanie czy sesja nie jest pusta
+  ```
+  $session | Should -Not -BeNullOrEmpty
+  ```
+
+  Sprawdzanie czy sesja jest otwarta
+  ```
+  $session.State | Should -Be "Opened"
+  ```
+  
+  Sprawdzanie czy sesja jest dostepna
+  ```
+  $session.Availability | Should -Be "Available"
+  ```
+
+  Wyciaganie calego aktywnego procesu ze zdalnej maszyny
+  ```
+  $processes = Invoke-Command -Session $session { Get-Process }
+  ```
+  
+  Sprawdzanie czy liczba procesow jest wieksza niz zero
+  ```
+  $processes.Count | Should -BeGreaterThan 0
+  ```
+
+  Sprawdzanie czy nazwa komputera dla procesow jest ustawiona na zdalnego hosta
+  ```
+  $processes | ForEach-Object { $_.PSComputerName | Should -Be $remoteHost }
+  ```
+
+  Usowanie sesji
+  ```
+  Remove-PSSession $session
+  ```
+  
+  
