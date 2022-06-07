@@ -139,10 +139,70 @@
   $GetProcess = { Get-Process -Name notepad -ErrorAction SilentlyContinue }
   ```
 
+  Uruchamianie procesu w petli
+  ```
+  $Processes = 1..4 | ForEach-Object { Start-Process notepad -PassThru }
+  ```
+
+  Wait for processes to start
+  ```
+            while ((& $GetProcess).Count -lt 4) {
+                Start-Sleep -Milliseconds 100
+            }
+  ```
+
+  Zatrzymywanie wszystkich procesow
+  ```
+  $Processes | Stop-Process
+  ```
+
+## [3. Azure]()
+  
+  Logowanie do Azure wraz z przypisywaniem danych logowania do zmiennej
+  ```
+  $account = Connect-AzAccount    
+  ```
+
+  Sprawdzanie czy zalogowało się
+  ```
+  $account | Should -Not -Be NullOrEmpty 
+  ```
+
+  Typ zmiemmej przetrzymujacej logowanie
+  ```
+  $account.type | Should -Be $PSAzureProfile
+  ```
+
+  Sprawdzanie maila 
+  ```
+  $account.Context.Account.Id | Should -Be 'cogiel@student.agh.edu.pl'
+  ```
+  
+  Sprawdzanie typu subskrypcji
+  ```
+  $account.Context.Subscription.Name | Should -Be 'Azure for Students'
+  ```
+
+  Sprawedzanie czy subskrypcja jest wlaczona
+  ```
+  $account.Context.Subscription.State | Should -Be 'Enabled'
   ```
 
   ```
 
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
   ```
 
   ```
