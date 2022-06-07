@@ -99,10 +99,15 @@
   Get-Process -Name NAZWA_PROCESU
   ```
   Process ma takie atrybuty jak:
+  
   .Id #np: $Process.Id | Should -Be $PID
+  
   .Name
+  
   .Path
+  
   .Parent.Name
+  
   .Parent.Path
 
 
