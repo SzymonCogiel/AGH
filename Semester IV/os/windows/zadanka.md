@@ -127,12 +127,16 @@
   Get-Content $File | Should -Be "Hello!" 
   ```
 
+  Usowanie pliku
   ```
-
+  Remove-Item $File 
   ```
-
+  
+  Create a script block that gets all notepad processes (and store the script block in a variable)
+  
+  Zawiera wszystkie procesy notepada
   ```
-
+  $GetProcess = { Get-Process -Name notepad -ErrorAction SilentlyContinue }
   ```
 
   ```
