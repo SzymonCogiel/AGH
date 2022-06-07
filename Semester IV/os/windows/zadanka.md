@@ -23,4 +23,30 @@
   Set-Location $PATH
   ```
   
+  Out-Null zamienia output funkcji na null wypisuje cicho (quietly)
+  ```
+  New-Item -Path 'A' -ItemType Directory | Out-Null 
+  ```
   
+  Taki ls powershellowy
+  ```
+  Get-ChildItem 
+  ```
+  
+  Pisanie w pliku od 0
+  ```
+  Set-Content -Path $PATH "CONTENT"
+  ```
+  
+  Dopisywanie do pliku
+  ```
+  Add-Content -Path $PATH "TEKST"
+  ```
+
+  ```
+
+  ```
+
+  ```
+
+  ```
